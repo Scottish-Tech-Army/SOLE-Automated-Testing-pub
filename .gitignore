@@ -1,0 +1,10 @@
+# Dependency directory
+node_modules
+cypress/videos
+cypress/screenshots
+CYP.01.js
+03.customer.admin.JS
+link.json
+example.json
+cypress.json
+reports

@@ -1,0 +1,17 @@
+name : Secret added
+on: push 
+jobs:
+      my-job:
+        runs-on: ubuntu-latest
+        name: To decript
+        steps:
+          - uses: actions/checkout@main
+          - name: Give rights to file
+            run : git update-index --chmod=+x .github/script/decrypt_secret.sh
+            
+          - name: To Decrept Credentioal file
+            run : .github/script/decrypt_secret.sh
+            env:
+              SOLE_AUTOMATION: ${{ secrets.SOLE_AUTOMATION }}
+          - name: Get the output time
+            run: cat cypress.json
